@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from google.appengine.ext import webapp
+from helpers import render
 
 class HomeHandler(webapp.RequestHandler):
     '''RequestHandler subclass for the home page.'''
@@ -8,5 +9,7 @@ class HomeHandler(webapp.RequestHandler):
 
 class TestHandler(webapp.RequestHandler):
     '''Handles generating test data and running test suite.'''
+
     def get(self):
-        pass
+        values = { 'header': 'Test page'}
+        self.response.out.write(render('test.html', values))

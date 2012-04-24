@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+{% block title %}{{ block.super }}{% endblock %}
+
+{% block content %}
+      <div class="hero-unit">
+        <h1>{{ header }}</h1>
+      <p>is a Web application that collects conversations from and information about Prince Edward Island, Canada from <a href="http://twitter.com">Twitter</a>.</p>
+      </div>
+
+      <div class="row">
+        <div class="span8">
+          <h2>Latest news</h2>
+          <p><em>Thursday, April 5th, 2012 by Jonathan M. Lane</em></p>
+          <p>Today I finally get to show TweetIsle to the Winter 2012 CSC206 class. I hope they like it!</p>
+        </div>
+
+        <div class="span4">
+          <h2>Built with</h2>
+          <ul>
+            <li>Google App Engine</li>
+            <li>Python 2.5</li>
+            <li>Tweepy</li>
+            <li>Twitter Bootstrap</li>
+          </ul>
+        </div>
+      </div>
+{% endblock %}
