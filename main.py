@@ -2,11 +2,12 @@
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 from handlers import HomeHandler, LogInHandler, TestHandler,\
-    LogInTwitterHandler
+    ListHandler, LogInTwitterHandler
 
 def main():
     application = webapp.WSGIApplication(
             [('/', HomeHandler),
+             ('/list(/.*)*', ListHandler),
              ('/login', LogInHandler),
              ('/login/twitter', LogInTwitterHandler),
              ('/test', TestHandler)],
