@@ -31,7 +31,15 @@ class LogInHandler(webapp.RequestHandler):
 
 class LogInTwitterHandler(webapp.RequestHandler):
     def get(self):
-        pass
+        values = {
+            'error': '<strong>Warning:</strong> OAuth '
+                'login did not complete.',
+            'message': 'OAuth is not yet implemented correctly. This '
+                'is a placeholder for the appropriate handler.'
+        }
+
+        self.response.out.write(render('error.html', values))
+        return
 
 
 class TestHandler(webapp.RequestHandler):
