@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+{% block title %}{{ block.super}}—Error{% endblock %}
+
+{% block content %}
+
+{% if error %}
+      <div class="alert alert-error">
+        <a data-dismiss="alert" class="close">×</a>
+        {{ error }}
+      </div>
+{% endif %}
+
+      <div class="page-header">
+        <h1>An error has occured...</h1>
+      </div>
+      <p>{{ message }}</p>
+{% endblock content %}
